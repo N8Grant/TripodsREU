@@ -17,7 +17,7 @@ class Hugoify:
         if isinstance(data, str):
             self.df = pd.read_excel(data)
         elif isinstance(data, pd.DataFrame):
-            self.df = df
+            self.df = data
         else:
             raise Exception("Must be a DataFrame object or a path to an excel file")
     def get_missing_ids(self):
@@ -26,7 +26,7 @@ class Hugoify:
         missing = []
         values = self.df.values
         for i in range(len(values)):  #
-            if type(values[i][0]) is type(3.6):
+            if type(values[i][0]) is type(3.6) or values[i][0] == "nan":
                 enterez = values[i][1]
                 missing.append({'index':i, 'enterez':enterez})
 
@@ -38,12 +38,15 @@ class Hugoify:
         ## Change Hugo Ids to new ids
         number_found = 0
         for i in range(len(hugo_ids)):
-            self.df.loc[missing[i]['index'],'Hugo_Symbol'] = hugo_ids[i]
-            if isinstance(hugo_ids[i],str):
+            self.df.iloc[missing[i]['index'],0] = hugo_ids[i]
+            if hugo_ids[i] != "nan":
                 number_found+=1
         print("Found ", number_found, "/", len(missing), "of the missing values")
         return self.df  
 
+def hugo(df, num_workers=7):
+    h = Hugoify(df, num_workers=num_workers)
+    return h.get_missing_ids()
         
 def get_id(missing):
     from urllib.parse import urlparse
@@ -58,10 +61,10 @@ def get_id(missing):
         # kill all script and style elements
         spans = soup.findAll("dd", {"class": "noline"})
         if len(spans) ==0:
-            return np.nan
+            return 'nan'
         hugo = str(spans[0].contents[0])
         if hugo == "" or hugo == None or len(hugo) == 0:
-            return np.nan
+            return 'nan'
 
         return hugo
 
@@ -75,7 +78,7 @@ def get_id(missing):
         if page.status_code == 200: 
             return get_text(page)
         else:
-            return np.nan
+            return 'nan'
 
     newURL = newURL = urlparse(URL+str(missing['enterez']))
     value=get_hugo(newURL.geturl())
