@@ -49,3 +49,9 @@ CIBERSORT:
 ![CIBERSORT Results](cibersort_results.png)
 
 The vizualizations are definitley different from ground truth but the NN is pretty promising. I will have to try it out on another dataset later to see how it performs. To see how much better the predictions were I ended up plotting the predicted values vs the actual values on a line to see how well they correleatd. The idea was that if they were verry close then they would stay along the line of identity and then you could estimate a regression line and also a r correlation. For the CIBERSORT algorithm it got an r correlation of .7086 for the NN deconvolver it got a r correlation of .93292. So pretty good! Again I will have to test it on another dataset while only trained on this generated data to see its robustness. 
+
+Below is the linear model for the NN method:
+![NN linear](nn_linear.png)
+
+Below is the linear model for cibersort:
+![cibersort linear](cibersort_linear.png)
