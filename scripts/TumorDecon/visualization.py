@@ -48,12 +48,10 @@ def cell_frequency_boxplot(sample_cell_freq, xsize=12, ysize=7):
         - cells frequency box plot in descending order
     """
     new_cell_freq = combine_celltypes(sample_cell_freq)
-    print(new_cell_freq.columns)
     b=new_cell_freq.median(axis = 0)
     b=list(zip(b.index,b))
     b = sorted(b, key=lambda x: x[-1],reverse=True)
     sorted_cells=[x[0] for x in b]
-    print(sorted_cells)
     new_cell_freq=new_cell_freq[sorted_cells]
     sns.set(rc={'figure.figsize':(xsize,ysize)})
     sns.set(style="white")
