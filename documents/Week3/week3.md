@@ -33,17 +33,23 @@ To test for statistical significance between the -1 and 0 group for the BAP1 gen
 | DC                  	| 0.0433   	|
 
 Here are KDE plots for cell types with low p values bwtween groups:
+
 B Cell:
+
 ![BAP1 B Cells](BAP1_Bcell.png)
 
 CD8T:
+
 ![BAP1 CD8 T Cell](BAP1_cd8t.png)
 
 Monocytes:
+
 ![BAP1 mono](BAP1_mono.png)
 
 DC:
+
 ![BAP1 dc](BAP1_dc.png)
+
 
 ## PTPN23 Gene mutation plots
 To test for statistical significance between the -1 and 0 group for the PTPN23 genes immune profiles I ran MW tests on each of the immune distributions to try to determine if there was any major difference. Here are the results for the MW tests between -1 and 0 groups:
@@ -63,24 +69,45 @@ To test for statistical significance between the -1 and 0 group for the PTPN23 g
 | DC                  	| 0.05119  	|
 
 Here are KDE plots for cell types with low p values bwtween groups:
+
 B Cell:
+
 ![PTPN23 B cell](PTPN23_Bcell.png)
 
 CD8T:
+
 ![PTPN23 CD8T](PTPN23_cd8t.png)
 
 Monocytes:
+
 ![PTPN23 Mono](PTPN23_mono.png)
 
 Plasma:
+
 ![PTPN23 Plasma](PTPN23_plasma.png)
 
 ## BAP1 Months of disease-specific survival between groups
 Given statistically significant immune responses above there is also a disparity between the DSS_MONTHS between the two groups.
+
 MW p value: 0.03960
+
 ![DSS BAP1](BAP1_DSS.png)
+
+There is also a large disparity between the mortality rates between these two groups. The group with the -1 mutation has a far higher mortality rate than the 0 group.
+
+P-value: 3.38147e-05
+
+![BAP! Survival](BAP1_survival.png)
 
 ## PTPN23 Months of disease-specific survival between groups
 Given statistically significant immune responses above there is also a disparity between the DSS_MONTHS between the two groups.
+
 MW p value: 0.03583
+
 ![DSS PTPN23](PTPN23_DSS.png)
+
+There is also a large disparity between the mortality rates between these two groups. The group with the -1 mutation has a far higher mortality rate than the 0 group.
+
+P-value: 4.44217e-05
+
+![BAP! Survival](PTPN23_survival.png)
