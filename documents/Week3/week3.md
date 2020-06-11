@@ -97,7 +97,7 @@ There is also a large disparity between the mortality rates between these two gr
 
 P-value: 3.38147e-05
 
-![BAP! Survival](BAP1_survival.png)
+![BAP1 Survival](BAP1_survival.png)
 
 ## PTPN23 Months of disease-specific survival between groups
 Given statistically significant immune responses above there is also a disparity between the DSS_MONTHS between the two groups.
@@ -110,4 +110,9 @@ There is also a large disparity between the mortality rates between these two gr
 
 P-value: 4.44217e-05
 
-![BAP! Survival](PTPN23_survival.png)
+![BAP1 Survival](PTPN23_survival.png)
+
+## Simmilarity between PTPN23 and BAP1
+Both groups for the BAP1 ang PTPN23 gene have striking similarities in their overlap of outcome distributions. Each of the groups have statistically significant roles to play in phenyotype and also health outcome. Im not sure how this works baut maybe there is something going on here. After analysis 100% of the patients in BAP1 -1 group are in PTPN23 -1 group. Also 97.7% of people in BAP1 0 are in PTPN23 0. I am not entirley sure about the direction of causation or correlation between these two genes, but the overlaps are striking.
+
+## Neural Net tests on CIBERSORT Data
