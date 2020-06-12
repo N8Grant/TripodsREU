@@ -14,7 +14,11 @@ If I have time:
 - Try to make a probabilistic neural net based off of which of the above techniques (Just plain expression data,singscore,or singscore&cibersort) works best at predicting immune response
 
 ## GSEA Results
+Here are the results from the GSEA applicaiton. I used the c5 gene set database howeber there were many variations of each of the sets. I just chose the all set for each of them.
 
+[v7.1](https://github.com/N8Grant/TripodsREU/tree/master/data/GSEAResults/c5.all.7.1v/index.html)
+
+[v6.2](https://github.com/N8Grant/TripodsREU/tree/master/data/GSEAResults/c5.all.6.2v/index.html)
 
 ## BAP1 Gene mutation plots
 To test for statistical significance between the -1 and 0 group for the BAP1 genes immune profiles I ran MW tests on each of the immune distributions to try to determine if there was any major difference. Here are the results for the MW tests between -1 and 0 groups:
