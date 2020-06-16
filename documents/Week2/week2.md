@@ -55,3 +55,5 @@ Below is the linear model for the NN method:
 
 Below is the linear model for cibersort:
 ![cibersort linear](cibersort_linear.png)
+
+

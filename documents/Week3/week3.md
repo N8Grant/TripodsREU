@@ -37,7 +37,7 @@ To test for statistical significance between the -1 and 0 group for the BAP1 gen
 | Mast cells          	| 0.223848 	|
 | DC                  	| 0.0433   	|
 
-Here are KDE plots for cell types with low p values bwtween groups:
+Here are KDE plots for cell types with low p values between groups:
 
 B Cell:
 
@@ -120,4 +120,7 @@ P-value: 4.44217e-05
 ## Simmilarity between PTPN23 and BAP1
 Both groups for the BAP1 ang PTPN23 gene have striking similarities in their overlap of outcome distributions. Each of the groups have statistically significant roles to play in phenyotype and also health outcome. Im not sure how this works baut maybe there is something going on here. After analysis 100% of the patients in BAP1 -1 group are in PTPN23 -1 group. Also 97.7% of people in BAP1 0 are in PTPN23 0. I am not entirley sure about the direction of causation or correlation between these two genes, but the overlaps are striking.
 
-## Neural Net tests on CIBERSORT Data
+## Neural Net Results
+Previous experiments were flawed as I mixed up the input for the cibersort algorithm so it was fitting to the wrong inputs. Actual results were not as impressive for the neural network technique and actually resulted in a significant decrease in performance a compared to the CIBERSORT algorithm when adjusted. However I am not going to throw this approcah out just yet. I have an inclination that this is just a symptom of overfiting. I want to amend this approach by changing the method by which I  simulate data. There are many other simulated data files in TD which I havent used. So therefore I am only capturing a small portion of the variance in possible outcomes. My inclination is that if I include the other SNR files into the trianing process and then also simulate points based on those then I could get a more promising model. Since I have only used a SNR of 100:5 this model is definitley subject to overfitting. I will try to include these extra points and then run the tests in the same manner.
+
+After the trials of including additional signal to noise ratio data the model still underperforms the CIBERSORT algorithm on a totally seperate test set. However it performs better on the simulation data test set which is definitley a symptom of overfitting. I think that this method is too data hungry to actually perform better than the state of the art models. I mean given the fact that I try to generate data based off of 80 training samples its highly likeley that this is just a data problem. As both Leili and I have stated a better way to do this using neural nets might be to leverage the outputs of other methods first and then fit a model to the new data and then see if it improves outcomes. 
