@@ -11,3 +11,6 @@ https://umass-amherst.zoom.us/j/98971351703
 
 ## Week 3 6/09/20
 [Synopsis](https://github.com/N8Grant/TripodsREU/blob/master/documents/Week3/week3.md)
+
+## Week 4 6/16/20
+[Synopsis](https://github.com/N8Grant/TripodsREU/blob/master/documents/Week4/week4.md)
