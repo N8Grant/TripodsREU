@@ -75,10 +75,10 @@ def convert_to_ensemble(raw, ens_hug, ens_hug2):
 def run_ensembl_to_gene(input_name, output_name, sep='\t'):
     raw_counts = pd.read_csv(input_name, header=0, sep=sep)
     name_first_col = list(raw_counts)[0]
-    # raw_counts[name_first_col] = [name[: name.find('.')] for name in list(raw_counts[name_first_col])]
+    raw_counts[name_first_col] = [name[: name.find('.')] for name in list(raw_counts[name_first_col])]
 
-    ensembl_hugo = pd.read_csv("C:/Users/NathanGrant/Programs/TripodsREU/scripts/convert_geneID_ensembl/hugo_enseml_synonym.txt", header=0, sep="\t")
-    ensembl_hugo2 = pd.read_csv("C:/Users/NathanGrant/Programs/TripodsREU/scripts/convert_geneID_ensembl/GSE87692_Primary_HsESF_TPMs_073015.txt", header=0, sep="\t")
+    ensembl_hugo = pd.read_csv("../scripts/convert_geneID_ensembl/hugo_enseml_synonym.txt", header=0, sep="\t")
+    ensembl_hugo2 = pd.read_csv("../scripts/convert_geneID_ensembl/GSE87692_Primary_HsESF_TPMs_073015.txt", header=0, sep="\t")
 
     ensembl_hugo2 = ensembl_hugo2[['ensemble_geneid', 'Associate Gene Name']]
     ensembl_hugo2.set_index('Associate Gene Name', inplace=True)
@@ -98,8 +98,8 @@ def run_gene_to_ensembl(input_name, output_name, sep='\t'):
     name_first_col = list(raw_counts)[0]
     raw_counts[name_first_col] = raw_counts[name_first_col].str.lower()
 
-    ensembl_hugo = pd.read_csv("C:/Users/NathanGrant/Programs/TripodsREU/scripts/convert_geneID_ensembl/hugo_enseml_synonym.txt", header=0, sep="\t")
-    ensembl_hugo2 = pd.read_csv("C:/Users/NathanGrant/Programs/TripodsREU/scripts/convert_geneID_ensembl/GSE87692_Primary_HsESF_TPMs_073015.txt", header=0, sep="\t")
+    ensembl_hugo = pd.read_csv("../scripts/convert_geneID_ensembl/hugo_enseml_synonym.txt", header=0, sep="\t")
+    ensembl_hugo2 = pd.read_csv("../scripts/convert_geneID_ensembl/GSE87692_Primary_HsESF_TPMs_073015.txt", header=0, sep="\t")
 
     ensembl_hugo2 = ensembl_hugo2[['ensemble_geneid', 'Associate Gene Name']]
     ensembl_hugo2.set_index('ensemble_geneid', inplace=True)
