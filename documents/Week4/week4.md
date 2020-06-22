@@ -1,12 +1,15 @@
 # Week 3
 ## Goals
-- Make sure they have p-values lower than .1
+- Also use FPKM data to check how cBioPortal came to their results, they claim that the median of the data is used but in another file they use the max. So basically see which transcript sequences are mapped to the same genes and see how they came to the numbers that they got
+
+- Get started on paper
+
+Done:
 - Check the patients at the tail ends of the distributions of immune cells to see if any of them show extreme values across multiple immune cell types (ex. at the tail end of both mono and DC cells)
 - Check to see if there is a correlation between the immune cell frequency and the  survival of the patients
 - Use the FPKM data on usc Xena and perform simmilar analysis as I have already done before to see if any of the transcript level genes could be of interest
-- Also use FPKM data to check how cBioPortal came to their results, they claim that the median of the data is used but in another file they use the max. So basically see which transcript sequences are mapped to the same genes and see how they came to the numbers that they got
 - Go over old analysis and check for other genes which showed up with high entropy to see if there was any interesting pathways
-- Get started on paper
+- Look at the other characteristics of patients and try to find relationships. 
 
 If I have time:
 - Generate data from the LM22 file from cibersort and later the LM22 source file by chosing random scalars for each of the columns of immune cell types and then summing all of the genes values up to reate a mixture sample. Later on introduce noise into the mix by sampling from anormal distribution with a scaled variance and then see how the neural net performs. 
@@ -107,4 +110,44 @@ Here are a list of high entropy tRNA:
 
 Because of the innacuracies of the conversion to hugo symbols I will wait in checking immune differences between these three groups.
 
+The gene POLK also shows up in the analysis done on the median gene expression data. 
+
+
+After normalizing the data with minimax, because I forgot again... I ran analysis again. This time I had to increase the number of components in the PCA to 43 to reach 80% of variance explained. The elbow was pretty much in the same spot so the number of clusters remained at 3. Here are some of the resultsing high entropy ensemble genes:
+
+- ENSG00000143971 --> ETAA1
+- ENSG00000131378 --> RFTN1
+- ENSG00000124279 --> FASTKD3
+- ENSG00000135454 --> B4GALNT1
+- ENSG00000126775 --> ATG14
+- ENSG00000178974 --> FBXO34
+
+Just because of the podcast on autophagy that I watched I am going to look further into the ATG14 gene which is responsible for autophagy at some level according to ensembl. After digging into some results I found that there seemed to be a difference in the proportion of patients who were deceased between the 0 and 1 groups. However teh test had a p value of .14 probably because of the couple of patients that are in the 1 group. 
+
+![ATG14 survival difference](ATG14_survival_diff.png)
+
+Question: Why not cluster based off of gene mutations instead of gene expression values since that is that we want to observe differences in afterwerds?
+
 ## Checking to see if BAP1 or PTPN23 Are in Any GSEA Pathways
+Both of these genes didnt show up in any of the enriched pathways with p value < .1. Not sure if it suggests that they are unimportant or that there is just an undiscovered pathway that these genes might take a role in.
+
+Note: HDAC family of genes showed up a lot in the  BAP1 -1 enriched pathways with HDAC1 showing up along multiple pathways in both GO data set results.
+
+## Averaged or Median???
+Given bowth scripts provided I wasnt able to determine whether or not any of the data was simply an average or actully  a median. I couldnt get teh genes data to coencide at all, such that even genes with single occurences dont match up with the data. I tried quite a few jenes and this eesmed to be the case for all of them that I tried. The Xena portal seems to suggest that the data is first averagd if its from the same sample and then combined into a genomic matrix. So maybe if a lab does a couple of tests what we are seeing for that ensemble is already an average and then CBioPortal did the job of combining into a genomic matrix where thay had their own hugo symbol mapping and copies of the same gene were taken at the median value. Not sure if this is a totally accurate interpretation.
+
+## Looking at more Phenotype Differences
+Using the dataset of phenotypes from USC Xensa I looked more into the different phenotypes which the patients had across the two BAP1 groups. Since some of the data was nissing for patients I just excluded it if it wasnt there and continued on with analysis. I will only show phenotype differences with p value lower than .1.
+
+tumor_basal_diameter p-value: .075026 -
+4 samples were ommited from this analysis
+
+![TBD](BAP1_tumor_basal_diameter.png)
+
+No significant gender differences were shown and everyone who reported race in the studies were white.
+
+## Paper
+Just kinda started a doc with some graphs that the other paper had that i Ill need to include in the work. 
+
+Questions: Is there a certain template I should use?
+           

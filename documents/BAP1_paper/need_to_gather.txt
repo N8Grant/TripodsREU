@@ -1,0 +1,21 @@
+Graphs and data that I need for the paper:
+
+Vizualizations for BAP1 -1 and BAP1 0 groups in terms of immune cell concentrations. 
+Probably would be better to make a graph which compares groups side by side so that comparision is easier.
+
+Graphs for stat significant immune fraction differences between groups
+B cell
+CD8T
+Monocytes
+DC
+
+Difference between tumor basal diameter between two groups and p value
+
+Differences between disease specific survival between the two groups
+
+Similarity between data for BAP1 and PTPN23 groups.
+
+Gotta look up more information about how pathways work and if that is a possible reason this isnt showing 
+up along GSEA results.
+
+A table of phenotype breakdown as shown in figure Table 1 in the sample paper.
