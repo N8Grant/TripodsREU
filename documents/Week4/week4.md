@@ -125,7 +125,7 @@ After normalizing the data with minimax, because I forgot again... I ran analysi
 
 Just because of the podcast on autophagy that I watched I am going to look further into the ATG14 gene which is responsible for autophagy at some level according to ensembl. After digging into some results I found that there seemed to be a difference in the proportion of patients who were deceased between the 0 and 1 groups. However teh test had a p value of .14 probably because of the couple of patients that are in the 1 group. 
 
-![ATG14 survival difference](ATG14_survival_diff.png)
+![ATG14 survival difference](ATG14_survival__diff.png)
 
 Question: Why not cluster based off of gene mutations instead of gene expression values since that is that we want to observe differences in afterwerds?
 
