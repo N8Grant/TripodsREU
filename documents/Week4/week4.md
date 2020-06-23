@@ -1,7 +1,6 @@
-# Week 3
+# Week 4
 ## Goals
 - Also use FPKM data to check how cBioPortal came to their results, they claim that the median of the data is used but in another file they use the max. So basically see which transcript sequences are mapped to the same genes and see how they came to the numbers that they got
-
 - Get started on paper
 
 Done:
@@ -27,9 +26,9 @@ These two patients observed no different health outcomes than the others with th
 I am now thinking how I can further seperate these groups from those who died and those who lived within the -1 BAP1 group. I will do the same thing as before and use decision trees to find high entropy decisions. So what I will do is use the mutation data instead and the labels will be living or deceased, 1 or 0. Maybe within the groups I can find another gene which might signifiy a pathway which distinguishes the groups even more. TBC
 
 ## Try to Identify New Pathways
-One gene that I found in the BAP1 -1 subgroup which "seems' do decrease surviveability is DCHS2 while the p-value tests dont seem to have very low values, the visualizations start to paint a different picture. The variance in disease survival months is decreeased significantly between the -1 group and the 0 group.  
+One gene that I found in the BAP1 -1 subgroup which "seems' do decrease surviveabilit y is DCHS2 while the p-value tests dont seem to have very low values, the visualizations start to paint a different picture. The variance in disease survival months is decreased significantly between the -1 group and the 0 group.  
 
-Another gene that I found was the POMK gene. This gene yeilded statistically significant results in both the DSS and also the surviveability. So as a subset of patients it might be interesting to look at. There were 3 groups, 0, -1, and 1. The -1 group only contained one patient so it might not be as interesting to look at. The 0 group had 6 patients, all of who survived, and the 1 group had 37 16 of whom survived and 21 who did not. After running a proportion test on these numbers, the p value was .00988. As for the DSS teh two groups had a p-value of .04457. Sample size is definitley a big factor here, but if there are differences that large just based off of a couple of samples then there may be something here.
+Another gene that I found was the POMK gene. This gene yeilded statistically significant results in both the DSS and also the surviveability. So as a subset of patients it might be interesting to look at. There were 3 groups, 0, -1, and 1. The -1 group only contained one patient so it might not be as interesting to look at. The 0 group had 6 patients, all of who survived, and the 1 group had 37 16 of whom survived and 21 who did not. After running a proportion test on these numbers, the p value was .00988. As for the DSS teh two groups had a p-value of .04457. Sample size is definitley a big factor here, but if there are differences that large just based off of a couple of samples then there may be something here. POMK by itself was also identified as a high entropy gene in both the ensemble findings and also the hugo findings.
 
 Survival Rates of the two groups:
 
@@ -42,6 +41,8 @@ Disease Specifice Survival of two groups:
 After more exploration the gene POTEA also shares the same subset of people with the same statistical test and so on. This gene however says it is "Prostate, Ovary, Testis-Expressed Protein On Chromosome 8". Genecard also states "Cancer/Testis Antigen Family 104, Member 3".
 
 The gene HGSNAT also shares the same groups as above but has a possibly more interesting genecard description. It describes "Among its related pathways are Innate Immune System and Metabolism". This makes me think if these patients might have a difference in immune response. I will check to se if the 6 people in the 0 group have differences in immune cell concentrations. 
+
+Question: Is it worth clustering on the subset of the patients that has the BAP1 -1 mutation again to find more high entropy genes to try to identify pathways or is this a dead end?
 
 ## Immune cell differences in BAP -1, (0,1) HGSNAT patients
 
