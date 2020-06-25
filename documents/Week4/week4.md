@@ -16,6 +16,7 @@ If I have time:
 Thoughts:
 - Check outlier patient health outcomes
 
+
 ## See outliers with the -1 BAP1 mutations immune responses
 Each of the patients in the -1 group have a certain immune cell profile. I am checking to see whether these patients have multiple extreme values for their gene mutations. To Do this I minmax scale their immune responses and then sort by a certan type of gene. Then I look at the other immune cell types to see if they are also relativley high. For teh BAP1 -1 type I checked patients with abnormally high fractions of CD8 T cells B cells Monocytes and DC. I then sorted by the scaled values and then checked their other sceled fractions. One interesting patient was TCGA-V4-A9F8-01 who had abnormally high levels of Monocytes and also very high levels of NK cells. Another patient was TCGA-VD-A8KL-01 who had high levels of DC cells and also a higher than average fraction of Macrophages being within the 5th highest patient.
 

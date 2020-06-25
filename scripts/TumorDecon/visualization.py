@@ -57,12 +57,13 @@ def cell_frequency_boxplot(sample_cell_freq, xsize=12, ysize=7):
     sns.set(style="white")
     palette={'Macrophages':'violet','CD8 T cells':'orange','CD4 T cells':'goldenrod','Monocytes':'lightsalmon','NK cells':'olivedrab','Mast cells':'red','B cells':'darkcyan','T cells gamma delta':'dodgerblue','DC':'gray','Plasma cells':'seagreen','Neutrophils':'navy', 'Eosinophils':'purple'}
     sns.boxplot(order=sorted_cells, data=new_cell_freq,palette=palette)
+    sns.swarmplot(order=sorted_cells, data=new_cell_freq,color=".25")
     plt.xlabel('')
     plt.xticks(rotation=90)
     plt.ylabel('Frequencey')
     plt.subplots_adjust(top=0.95,bottom=0.2)
     plt.show()
-    return
+    return plt
 
 
 def cell_frequency_barchart(sample_cell_freq, xsize=15, ysize=7):
