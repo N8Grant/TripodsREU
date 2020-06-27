@@ -6,11 +6,7 @@
 - Also do immune cell clustering for the subgropus of BAP1 0 and BAP1 1 groups
 - See if the diameter varies based off of the groups of the clusters for immune cluster
 
-- Put points in box plots
-- Highlight negative correlation in B cells with tumor radius
-- Title on graphs about the percentages of BAP1 -1 patients in each group
-- scatterplot with the APOL family and the CD8T cells for correlation make the hue ofg the points equal to BAP1 group 
-- Check kout the postdocs data and see if i can find anything interesting
+- Check out the postdocs data and see if i can find anything interesting
 - Check out manova
 
 - Look at RGS5 to find the methods for making many of the graphs
@@ -25,4 +21,7 @@ Done:
 - See if there is a correlation between the tumor diameter and immune cell concetration both over all of the patients and also within the BAP1 0 and BAP1 -1 groups
 - See if the diameter varies based off of the groups of the clusters
 - When finding other genes from subgroups do manwhittney test on most variant genes between the two groups and see if MW test yields significant difference between the two gene expression levels
-
+- Put points in box plots
+- Highlight negative correlation in B cells with tumor radius
+- Title on graphs about the percentages of BAP1 -1 patients in each group
+- scatterplot with the APOL family and the CD8T cells for correlation make the hue ofg the points equal to BAP1 group 
