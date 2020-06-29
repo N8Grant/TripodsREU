@@ -1,8 +1,6 @@
 # Week 5
 ## Goals 
 - Check out the postdocs data and see if i can find anything interesting
-
-
 - Look at RGS5 to find the methods for making many of the graphs
 - Make simmilar graphs to the on which the other student has
 - Just use a scientific reports template for the paper and start to gather resources and start on that 
@@ -231,7 +229,7 @@ Here I only have differences for Immune cells which were statistically signifnic
 
 ![Macrophages](i_macro_boxplot.png)
 
-![CD8 T 4 Cells](i_cdt8_boxplot.png)
+![CD8 T Cells](i_cd8t_boxplot.png)
 
 ![Mast Cells](i_mast_boxplot.png)
 
@@ -275,3 +273,22 @@ Interesting that there is a statistically significant difference between CD8 T c
 ![CD8 T cells vs DSS](cd8t_vs_dss_grp2.png)
 
 ![CD8 T cells vs OS status](cd8t_vs_os_grp2.png)
+
+## Phenotype Differences Across Groups
+Since I really want to focus on APOL6 and its possible effect I will only look for differences between group 2 and other groups. It seemed that there were no significant phenotype differences between immune group clusters. When looking outside of just group 2 differences there was a significant difference between the group 0 and group 3 in terms of tumor basal radius which is very interesting and warrants further investigation, but for now I will focus on the APOL6 gene.
+
+## Looking at stages of cancer
+There seemed to be no difference between group 2 and the rest of the data points as a whole when it came to the stages which the cancer was at.
+
+## Looking at Most Variant Genes in Group 2
+My goal here is to search amongst many of the most variant genes to try to find out if there is another gene which also has very high predictive power as to what CD8 T cells are going to be like. I want to see if there are a couple of genes that when mixed together get this exaggerated response, albeit predictivley. The results werent amazing as the only genes which when combined made for a higher correlation was TAP1 and CCL4.  
+
+Another approach I took was to fit a linear regression model and to see what genes when combined with APOL6 would make for the best prediction of CD8 T cells. The result however is a bunch of genes which seem to have no impact on cd8 t cells, or at least some marginal impact which is harmless and then the APOL6 gene does the heavy lifting and accounts for most of the equations score. 
+
+One interesting result is the gene MPPE1 which also has to do with lipids as does APOL6.
+![mppe1_vs_apol6](mppe1_vs_apol6.png)
+
+Another interesting result is PRR5L which is another one of the best predictors of CD8 T cells coupled with APOL6. 
+![prr5l_vs_apol6](prr5l_vs_apol6.png)
+
+## 
