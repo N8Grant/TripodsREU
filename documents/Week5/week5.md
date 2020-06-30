@@ -285,10 +285,26 @@ My goal here is to search amongst many of the most variant genes to try to find 
 
 Another approach I took was to fit a linear regression model and to see what genes when combined with APOL6 would make for the best prediction of CD8 T cells. The result however is a bunch of genes which seem to have no impact on cd8 t cells, or at least some marginal impact which is harmless and then the APOL6 gene does the heavy lifting and accounts for most of the equations score. 
 
-One interesting result is the gene MPPE1 which also has to do with lipids as does APOL6.
+One interesting result is the gene MPPE1 which also has to do with lipids as does APOL6. " Acts in lipid remodeling steps of GPI-anchor maturation by mediating the removal of a side-chain ethanolamine-phosphate (EtNP) from the second Man (Man2) of the GPI intermediate, an essential step for efficient transport of GPI-anchor proteins"
 ![mppe1_vs_apol6](mppe1_vs_apol6.png)
 
-Another interesting result is PRR5L which is another one of the best predictors of CD8 T cells coupled with APOL6. 
+![Immune groups PRR5L](i_mppe1.png)
+
+Another interesting result is PRR5L which is another one of the best predictors of CD8 T cells coupled with APOL6. Its cool because the gene "ssociates with the mTORC2 complex that regulates cellular processes including survival and organization of the cytoskeleton"
+
 ![prr5l_vs_apol6](prr5l_vs_apol6.png)
 
-## 
+![Immune groups PRR5L](i_prr5l.png)
+
+After doing this analysis over all of the patients I found different genes which have a high correlation to CD8 T cells. One in particular is CD70 which has a genecard reading "it induces proliferation of costimulated T cells, enhances the generation of cytolytic T cells, and contributes to T cell activation. This cytokine is also reported to play a role in regulating B-cell activation, cytotoxic function of natural killer cells, and immunoglobulin sythesis." 
+
+![cd70_vs_apol6](cd70_vs_apol6.png)
+
+![Immune groups CD70](i_cd70.png)
+
+## Data normalization
+After emailing the cbio portal people about the tcga dataset and how they came to the conclusion they referred me to a FAQ site where they verify that it is in fact the median centered across all of the enterez ids which map to the same gene
+
+## PostDocs Data
+
+## Graphs for Paper
