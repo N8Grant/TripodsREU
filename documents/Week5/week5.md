@@ -303,8 +303,14 @@ After doing this analysis over all of the patients I found different genes which
 ![Immune groups CD70](i_cd70.png)
 
 ## Data normalization
-After emailing the cbio portal people about the tcga dataset and how they came to the conclusion they referred me to a FAQ site where they verify that it is in fact the median centered across all of the enterez ids which map to the same gene
+After emailing the cbio portal people about the tcga dataset and how they came to the conclusion they referred me to a FAQ site where they verify that it is in fact the median centered across all of the enterez ids which map to the same gene according to some RESM thing.
 
 ## PostDocs Data
+Not sure what to do with this data that was given. Im not sure what im supposed to compare this with.
 
 ## Graphs for Paper
+!["Causal" Graph](graph.png)
+
+Also use graphs above
+
+Overleaf link: https://www.overleaf.com/8957457511tzdywpkvqzqg
