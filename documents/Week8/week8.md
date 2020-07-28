@@ -13,6 +13,3 @@
         - Boxplot for cd8 t cell high  and cd8 t cell low vs survival months and age of diagnosis
 - Make a synopsis of my findings for the doctor
 
-## Done
-- color coded
-- 
